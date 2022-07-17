@@ -32,10 +32,7 @@ public class Main {
     public static void task3 () {
         int year = 1900;
 
-        if (year % 4 == 0 && year % 100 != 0) {
-            System.out.println("Год является высокосным");
-        }
-        else if (year % 100 == 0 && year % 400 == 0) {
+        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
             System.out.println("Год является высокосным");
         }
         else {
@@ -51,7 +48,6 @@ public class Main {
         }
         else {
             deliveryDay = (int)(Math.ceil(deliveryDistance / 40)+1);
-//            deliveryDay = deliveryDistance / 40;
         }
 
         System.out.println("Потребуется дней: " + deliveryDay);
@@ -73,7 +69,7 @@ public class Main {
                 System.out.println("Осень");
                 break;
             default:
-                System.out.println(" Такого месяца не существует");
+                System.out.println("Такого месяца не существует");
         }
     }
 }
